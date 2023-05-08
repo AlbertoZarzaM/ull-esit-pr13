@@ -1,11 +1,11 @@
 import express from 'express';
 import './db/mongoose.js';
-import { noteRouter } from './routers/note.js';
-import { userRouter } from './routers/user.js'
+import { asignaturaRouter } from './routers/asignatura.js';
+import { alumnosRouter } from './routers/alumnos.js'
 import { defaultRouter } from './routers/default.js';
 
 export const app = express();
 app.use(express.json());
-app.use(noteRouter);
-app.use(userRouter);
+app.use(asignaturaRouter);
+app.use(alumnosRouter);
 app.use(defaultRouter);
